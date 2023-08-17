@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <ul>
+    <th:block th:each="i : ${names}">
+        <li th:text="${i}"></li>
+    </th:block>
+  </ul>
+  <div>
+      <h3>Java Types</h3>
+      <ol>
+          <li th:each="item : ${names}" th:text="${item}"></li>
+      </ol>
+  </div>
+  <div>
+      <h3>Java Types</h3>
+      <ol th:each="two : ${names}">
+          <li th:text="${two}"></li>
+      </ol>
+  </div>
+</body>
+</html>

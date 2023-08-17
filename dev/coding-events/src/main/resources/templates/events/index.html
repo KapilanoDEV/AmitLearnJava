@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="~{fragments :: head}"></head>
+<body>
+<h1>All Events</h1>
+<nav th:replace="~{fragments :: navigation}"></nav>
+<p th:unless="${eventList} and ${eventList.size()}">No events!</p>
+    <ul>
+            <th:block th:each="i : ${eventList}">
+                <li th:text="${i}"></li>
+            </th:block>
+    </ul>
+
+</body>
+</html>
