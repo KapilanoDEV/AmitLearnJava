@@ -19,12 +19,7 @@ public class EventController {
     // lives at /events/display
     @GetMapping("display")
     public String displayAllEvents(Model model) {
-     //   List<String> events = new ArrayList<>();
 
-//        events.add("Anti-Trump Demo");
-//        events.add("Anti-LGBTQ Demo");
-//        events.add("Anti-OIL Demo");
-//        events.add("Chiswick Car boot Sale");
 
         model.addAttribute("eventList",events);
         return "events/index";
