@@ -1,20 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="~{fragments :: head}"></head>
-<body class="container">
+<body>
 
-<nav th:replace="~{fragments :: navigation}"></nav>
-<p th:unless="${eventList} and ${eventList.size()}">No events!</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-            </tr>
-        </thead>
-            <tr th:each="i : ${eventList}">
-                <td th:text="${i}"></td>
-            </tr>
-    </table>
+<!--<nav th:replace="~{fragments :: navigation}"></nav>-->
+<header th:replace="~{fragments :: header}"></header>
+<!--<form method="post" action="/events/create">-->
+<!--    <input type='text' name='eventName'/>-->
+<!--    <input type="text" name="eventDescription" />-->
+<!--    <input type='submit' value='Add an event name'>-->
+<!--</form>-->
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+
+        <tr th:each="i : ${eventList}">
+            <td th:text="${i.name}"></td>
+            <td th:text="${i.description}"></td>
+        </tr>
+
+</table>
+
 
 </body>
 </html>
