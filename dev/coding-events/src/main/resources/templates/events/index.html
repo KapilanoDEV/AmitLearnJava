@@ -18,8 +18,13 @@
         <td th:text="${i.id}"></td>
         <td th:text="${i.name}"></td>
         <td th:text="${i.description}"></td>
+        <td>
+            <a th:href="@{/events/edit/{id}(id=${i.id})}">Edit</a>
+        </td>
+
     </tr>
 </table>
+
 
 
 </body>
