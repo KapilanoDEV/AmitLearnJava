@@ -2,29 +2,8 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="~{fragments :: head}"></head>
 <body>
-
-<!--<h1>Coding Events</h1>-->
-
-<header th:replace="~{fragments :: header}"></header>
-
 <!--<nav th:replace="~{fragments :: navigation}"></nav>-->
-<!--<p th:unless="${eventList} and ${eventList.size()}">No events!</p>-->
-<table>
-    <thead>
-        <tr>
-			<th>ID</th>
-            <th>Name</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <th:block th:each="i : ${eventList}">
-        <tr>
-			<td th:text="${i.id}"></td>
-            <td th:text="${i.name}"></td>
-            <td th:text="${i.description}"></td>
-        </tr>
-    </th:block>
-</table>
+<header th:replace="~{fragments :: header}"></header>
 
 
 </body>

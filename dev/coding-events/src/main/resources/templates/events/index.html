@@ -2,29 +2,23 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="~{fragments :: head}"></head>
 <body>
-
 <!--<nav th:replace="~{fragments :: navigation}"></nav>-->
 <header th:replace="~{fragments :: header}"></header>
-<!--<form method="post" action="/events/create">-->
-<!--    <input type='text' name='eventName'/>-->
-<!--    <input type="text" name="eventDescription" />-->
-<!--    <input type='submit' value='Add an event name'>-->
-<!--</form>-->
-<table>
+
+
+<table class="table table-striped">
     <thead>
     <tr>
 		<th>ID</th>
-        <th>Name</th>
+        <th>Event Name</th>
         <th>Description</th>
     </tr>
     </thead>
-
-        <tr th:each="i : ${eventList}">
-			<td th:text="${i.id}"></td>
-            <td th:text="${i.name}"></td>
-            <td th:text="${i.description}"></td>
-        </tr>
-
+    <tr th:each="i : ${eventList}">
+        <td th:text="${i.id}"></td>
+        <td th:text="${i.name}"></td>
+        <td th:text="${i.description}"></td>
+    </tr>
 </table>
 
 
