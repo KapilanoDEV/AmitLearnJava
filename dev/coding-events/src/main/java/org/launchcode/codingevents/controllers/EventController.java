@@ -56,4 +56,7 @@ public class EventController {
     	
     	return "redirect:";
     }
+
+    @GetMapping
+
 }
