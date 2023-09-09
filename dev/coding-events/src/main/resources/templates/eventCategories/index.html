@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="~{fragments :: head}"></head>
-<body>
+<body class="container">
 <!--<nav th:replace="~{fragments :: navigation}"></nav>-->
 <header th:replace="~{fragments :: header}"></header>
-
 
 <table class="table table-striped">
     <thead>
     <tr>
-        <th>Event Name</th>
+        <th>Category Name</th>
     </tr>
     </thead>
-    <tr th:each="i : ${eventList}">
-        <td><a th:href="'/events/detail?eventId=' + ${i.id}" th:text="${i.name}"></a></td>
-        <!--        <td>-->
-<!--            <a th:href="@{/events/edit/{id}(id=${i.id})}">Edit</a>-->
-<!--        </td>-->
+    <tr th:each="category : ${categories}">
+        <td> <a th:text="${category.name}" th:href="'/events/?categoryId=' + ${category.id}"></a></td>
     </tr>
+
 </table>
-
-
 
 </body>
 </html>

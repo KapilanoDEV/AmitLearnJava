@@ -5,6 +5,7 @@
     <title>Events</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" th:href="@{/styles.css}">
 </head>
 <body>
 
@@ -14,6 +15,10 @@
         <li class="nav-item"><a class="nav-link" href="/events/">All Events</a></li>
         <li class="nav-item"><a class="nav-link" href="/events/create">Create Event</a></li>
         <li class="nav-item"><a class="nav-link" href="/events/delete">Delete Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="/eventCategories/">All Categories</a></li>
+        <li class="nav-item"><a class="nav-link" href="/eventCategories/create">Create Category</a></li>
+        <li class="nav-item"><a class="nav-link" href="/tags/">All Tags</a></li>
+        <li class="nav-item"><a class="nav-link" href="/tags/create">Create Tag</a></li>
 <!--        <li class="nav-item"><a class="nav-link" href="@{/events/edit/{id}(id=${event.id})}">Edit</a></li>-->
 <!--        <li class="nav-item"><a class="nav-link" href="/events/edit">Edit an Event</a></li>-->
     </ul>
